@@ -66,3 +66,31 @@ function mostrarAmigosEnLista() {
 
 //------------------- commit 2: Sortear amigo secreto -------------------
 
+// --- Función para realizar el sorteo aleatorio ---
+
+function sortearAmigo() {
+
+    // Validar que haya al menos dos amigos para realizar el sorteo.
+
+    if (amigos.length < 2) {
+        alert("Necesitas al menos dos amigos para realizar el sorteo.");
+        return;
+    }
+
+    // Generar un índice aleatorio.
+
+    // Math.random() devuelve un número flotante entre 0 (inclusive) y 1 (exclusivo).
+    let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+
+    // Obtener el nombre sorteado usando el índice aleatorio.
+    let amigoSorteado = amigos[indiceAleatorio];
+
+    // Obtener el elemento donde se mostrará el resultado.
+    let resultado = document.getElementById('resultado');
+
+    // Actualizar el contenido de ese elemento para mostrar el amigo sorteado.
+   
+    resultado.innerHTML = `<p class="winner-message">El amigo secreto es: <span>${amigoSorteado}</span></p>`;
+}
+
+// -------- commit 3 : Agregar Enter para ingresar amigos -----------
