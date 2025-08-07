@@ -33,4 +33,36 @@ function agregarAmigo() {
 
 //   ------------------- commit 1: Agregar amigos y sortear amigo secreto -------------------
 
+// --- Función para mostrar la lista de amigos  ---
+
+function mostrarAmigosEnLista() {
+
+    // Obtener el elemento de la lista HTML con ID "listaAmigos".
+
+    let lista = document.getElementById('listaAmigos');
+
+    // Limpiar la lista existente para evitar duplicados.
+
+    lista.innerHTML = "";
+
+    // Recorrer  el array 'amigos'.
+
+    for (let i = 0; i < amigos.length; i++) {
+
+        // Crear un nuevo elemento de lista (<li>) para cada nombre.
+
+        let li = document.createElement('li');
+
+        // Asignar el nombre del amigo al texto del elemento <li>.
+
+        li.textContent = amigos[i];
+
+        // Agregar el nuevo elemento <li> a la lista <ul>.
+
+        lista.appendChild(li);
+    }
+}
+
+
+//------------------- commit 2: Sortear amigo secreto -------------------
 
