@@ -94,3 +94,27 @@ function sortearAmigo() {
 }
 
 // -------- commit 3 : Agregar Enter para ingresar amigos -----------
+
+// --- Event Listener para la tecla 'Enter' ---
+// Obtenemos el campo de texto.
+
+let inputAmigo = document.getElementById('amigo');
+
+// Agregamos un 'listener' para el evento 'keypress' (cuando se presiona una tecla).
+
+inputAmigo.addEventListener('keypress', function(event) {
+
+    // Comprobamos si la tecla presionada es 'Enter'.
+    // `event.key` es la forma de obtener el nombre de la tecla.
+
+    if (event.key === 'Enter') {
+
+        // Prevenimos el comportamiento por defecto de la tecla 'Enter' en un input (que en algunos casos es enviar un formulario).
+        event.preventDefault();
+
+        // Llamamos a nuestra función 'agregarAmigo' para procesar la entrada.
+        agregarAmigo();
+    }
+});
+
+// ------------------------commit 4 Todo termindado------------------------
