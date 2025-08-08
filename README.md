@@ -27,7 +27,7 @@ web simple para sortear un "amigo secreto" de forma aleatoria.
  navegador web moderno 
 
 
-## Capturas de pantall
+## Capturas de pantalla
 
 ![Pantalla principal](https://github.com/sampozo/AmigoSecreto/blob/main/assets/Captura1.PNG)
 
